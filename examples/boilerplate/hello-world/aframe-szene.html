@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Mixed_Reality -- A-Frame-Szene</title>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+
+
+
+
+<body>
+  
+  <a-scene shadow="type: pcfsoft">
+    <a-assets>
+      <img id="holz" src="holz.jpg">
+      <a-asset-item id="baum" src="baum.glb"></a-asset-item>
+      <a-asset-item id="building" src="building.glb"></a-asset-item>
+      <a-asset-item id="stuhl" src="stuhl.glb"></a-asset-item>
+      <a-asset-item id="table" src="table.glb"></a-asset-item>
+      <a-asset-item id="sun" src="sun.glb"></a-asset-item>
+    </a-assets>
+    
+
+
+      <a-entity light="type: ambient; intensity: 1"></a-entity>
+      <a-entity 
+        light="type: directional; castShadow: true; intensity: 2.0; shadowMapWidth: 500; shadowMapHeight: 700" 
+        position="0 200 300">
+      </a-entity>
+
+      <a-plane 
+        position="0 0 0" 
+        rotation="-90 0 0" 
+        width="200" 
+        height="200" 
+        color="green" 
+        shadow="receive: true">
+      </a-plane>
+
+      <a-box 
+        position="10 2.5 -20" 
+        width="10" 
+        height="5" 
+        depth="20" 
+        src="#holz" 
+        shadow="cast: true; receive: true">
+      </a-box>
+
+      
+
+      <a-entity 
+        gltf-model="#baum" 
+        position="60 0 0" 
+        scale="10 10 10" 
+        shadow="cast: true; receive: true">
+      </a-entity>
+
+      <a-entity 
+        gltf-model="#sun" 
+        position="0 200 300" 
+        scale="20 20 20" 
+        shadow="cast: true; receive: true">
+      </a-entity>
+
+      <a-entity 
+        gltf-model="#building" 
+        position="50 0 50" 
+        scale="10 10 10" 
+        rotation="0 -100 0" 
+        shadow="cast: true; receive: true">
+      </a-entity>
+
+      <a-entity 
+        gltf-model="#stuhl" 
+        position="-20 0 30" 
+        scale="1 1 1" 
+        rotation="0 -45 0" 
+        shadow="cast: true; receive: true">
+      </a-entity>
+
+      <a-entity 
+        gltf-model="#table" 
+        position="-15 0 -30" 
+        scale="10 10 10" 
+        shadow="cast: true; receive: true">
+      </a-entity>
+
+
+
+    <a-sky color="steelblue"></a-sky>
+
+
+
+
+
+  </a-scene>
+</body>
+</html>
