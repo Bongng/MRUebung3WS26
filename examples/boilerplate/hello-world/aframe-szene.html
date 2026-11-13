@@ -25,8 +25,8 @@
 
       <a-entity light="type: ambient; intensity: 1"></a-entity>
       <a-entity 
-        light="type: directional; castShadow: true; intensity: 2.0; shadowMapWidth: 500; shadowMapHeight: 700" 
-        position="0 200 300">
+        light="type: directional; castShadow: true; intensity: 1.5; shadowMapWidth: 2048; shadowMapHeight: 2048; shadowCameraLeft: -80; shadowCameraRight: 80; shadowCameraTop: 80; shadowCameraBottom: -80; shadowCameraFar: 500"
+        position="200 100 100">
       </a-entity>
 
       <a-plane 
@@ -58,9 +58,9 @@
 
       <a-entity 
         gltf-model="#sun" 
-        position="0 200 300" 
-        scale="20 20 20" 
-        shadow="cast: true; receive: true">
+        rotation="0 -90 0" 
+        position="200 100 100" 
+        scale="20 20 20">
       </a-entity>
 
       <a-entity 
